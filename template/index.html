@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Insurance Charges Prediction</title>
+</head>
+
+<body style="background-color: rgb(218, 237, 223);">
+    <center>
+
+    <h1> Health Insurance Charges Prediction </h1>
+    <form method="GET" action="/predict_charges">
+        <table border="1">
+            <tr>
+                  <td><label>Age:</label></td><td><input type = "text" name = "age"></td>  
+            </tr>    
+            <tr> 
+                    <td><label>Gender:</label></td>
+                    <td>
+                        <select name = "gender">
+                        <option value = "male">Male</option>
+                        <option value = "female">Female</option>
+                        </select>
+                    </td>                   
+            </tr>        
+            <tr>
+                    <td> <label>BMI:</label></td>
+                    <td><input type = "text" name = "bmi"></td>
+            </tr>   
+            <tr>    
+                    <td><label>Children:</label></td>
+                    <td><input type = "text" name = "children"></td>
+            </tr>
+            <tr>    
+                <td><label>Smoker:</label></td>
+                <td>
+                    <label>Yes:</label> <input type = "radio" name= "smoker" value = "yes">
+                    <label>No:</label> <input type = "radio" name= "smoker" value = "no">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Region:</label></td>
+                <td>
+                    <select name = "region">
+                    <option value = "northeast">Northeast</option>
+                    <option value = "southeast">Southeast</option>
+                    <option value = "northwest">Northwest</option>
+                    <option value = "southwest">Southwest</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type = "submit" value="SUBMIT"></td>
+            </tr>    
+        
+        <tr>
+        
+        </tr>
+        </table>
+        <br>
+        <h4><strong>Your insurance premium charges will be <b> {{ prediction }} /- Rs.</b> Only </strong></h4>
+    </form>
+
+    </center>
+</body>
+</html>
